@@ -4,7 +4,7 @@ import { sample } from "../../utils";
 import { WORDS } from "../../data";
 import GuessInput from "../GuessInput/GuessInput";
 import GuessResults from "../GuessResults/GuessResults";
-import GuessGrid from "../Guess/Guess";
+import Guess from "../Guess/Guess";
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -19,7 +19,7 @@ function Game() {
   }
   return (
     <>
-      <GuessResults guesses={guesses} />
+      <GuessResults guesses={guesses} answer={answer} />
       <GuessInput handleSubmitGuess={handleSubmitGuess} />
     </>
   );
